@@ -1,9 +1,14 @@
 import React from 'react';
-import Home from '../components/header';
-
+import Header from '../components/header';
+import Nav from '../components/nav';
+import Collection from '../components/collection';
 const HomePage = () => {
     return (
-        <Home />
+        <>
+        <Nav />
+        <Header />
+        <Collection />
+        </>
     );
 };
 
