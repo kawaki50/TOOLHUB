@@ -5,13 +5,13 @@ const Home = () => {
         <section id="home">
         <div className="home_page ">
             <div className="home_img ">
-                <img src="https://i.postimg.cc/t403yfn9/home2.jpg" alt="img "/>
+                <img src="https://www.digitalmarketing-conference.com/wp-content/uploads/2016/05/tools.jpg" alt="img "/>
             </div>
             <div className="home_txt ">
-                <p className="collection">SUMMER COLLECTION</p>
-                <h2>FALL - WINTER<br/>Collection 2023</h2>
-                <div className="home_label ">
-                    <p>A specialist label creating luxury essentials. Ethically crafted<br/>with an unwavering commitment to exceptional quality.</p>
+                <h2>COLLECTION ÉTÉ – BRICOLAGE<br/>Collection 2025</h2>
+                <div className="home_label " style={{width: '30%'}}>
+                    <p style={{color: 'black'}}>Une marque spécialisée dans les essentiels du bricolage et de l’outillage.
+                    Conçus avec soin, nos produits allient qualité professionnelle, durabilité et engagement éthique pour accompagner tous vos projets, du plus simple au plus ambitieux.</p>
                 </div>
                 <button><a href="#sellers">SHOP NOW</a><i className='bx bx-right-arrow-alt'></i></button>
                 <div className="home_social_icons">

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Content from './Content';
+import Content from './Content_collection';
 
 const Collection = () => {
     const [categories, setCategories] = useState([]);
