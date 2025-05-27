@@ -6,9 +6,9 @@ const Content = ({ className, imageSrc, imageAlt, title }) => {
             <img src={imageSrc} alt={imageAlt} />
             <div className={`img-${className}`}>
                 <p>{title}</p>
-                <button onClick={() => window.location.href = '#sellers'}>
+                {/*<button onClick={() => window.location.href = '#sellers'}>
                     SHOP NOW
-                </button>
+                </button>*/}
             </div>
         </div>
     );

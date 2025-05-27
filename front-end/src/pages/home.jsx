@@ -3,6 +3,8 @@ import Header from '../components/header';
 import Nav from '../components/nav';
 import Collection from '../components/collection';
 import TopSale from '../components/topSale';
+import NewArrivals from '../components/newArrivals';
+import HotSales from '../components/hotSales';
 const HomePage = () => {
     return (
         <>
@@ -10,6 +12,8 @@ const HomePage = () => {
         <Header />
         <Collection />
         <TopSale />
+        <NewArrivals />
+        <HotSales />
         </>
     );
 };

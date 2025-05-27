@@ -18,7 +18,7 @@ const Nav = () => {
                     <li><a href="#login">Login</a></li>
                 </ul>
                 <div className="logo">
-                    <img src="https://i.postimg.cc/TP6JjSTt/logo.webp" alt="Logo" />
+                    <img src="../src/assets/img/LOGO.png" alt="Logo" style={{ width: '180px'}} />
                 </div>
             </div>
         </nav>
