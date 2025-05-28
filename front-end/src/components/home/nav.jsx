@@ -1,5 +1,5 @@
 import React from 'react';
-import '../assets/css/style.css';
+import { Link } from 'react-router-dom';
 const Nav = () => {
     return (
         <nav className="navbar">
@@ -13,12 +13,11 @@ const Nav = () => {
                 <ul className="menu-items">
                     <li><a href="#home">Home</a></li>
                     <li><a href="#sellers">Shop</a></li>
-                    <li><a href="#news">Blog</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li><a href="#login">Login</a></li>
+                    <li><Link to="/login">Login</Link></li>
                 </ul>
                 <div className="logo">
-                    <img src="../src/assets/img/LOGO.png" alt="Logo" style={{ width: '180px'}} />
+                    <img src="/src/assets/img/LOGO.png" alt="Logo" style={{ width: '180px'}} />
                 </div>
             </div>
         </nav>

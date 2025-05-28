@@ -1,6 +1,5 @@
 # Dockerfile.frontend
-FROM node:22.13.1
-
+FROM node:20-alpine
 
 WORKDIR /app
 
@@ -9,7 +8,8 @@ RUN npm install
 
 COPY front-end/ .
 
-RUN npm run build
+# Ajout d'une étape de développement pour vérifier les erreurs
+RUN npm run build || (echo "Build failed. Check your import paths." && exit 1)
 
 EXPOSE 3000
-CMD ["npm", "start"]
+CMD ["npm", "run", "dev"]

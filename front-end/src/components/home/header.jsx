@@ -15,10 +15,10 @@ const Home = () => {
                 </div>
                 <button><a href="#sellers">SHOP NOW</a><i className='bx bx-right-arrow-alt'></i></button>
                 <div className="home_social_icons">
-                    <a href="#"><i class='bx bxl-facebook'></i></a>
-                    <a href="#"><i class='bx bxl-twitter'></i></a>
-                    <a href="#"><i class='bx bxl-pinterest'></i></a>
-                    <a href="#"><i class='bx bxl-instagram'></i></a>
+                    <a href="#"><i className='bx bxl-facebook'></i></a>
+                    <a href="#"><i className='bx bxl-twitter'></i></a>
+                    <a href="#"><i className='bx bxl-pinterest'></i></a>
+                    <a href="#"><i className='bx bxl-instagram'></i></a>
                 </div>
             </div>
         </div>

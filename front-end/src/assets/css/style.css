@@ -248,7 +248,7 @@ body {
 }
 
 .home_txt button {
-    background-color: var(--black);
+    background-color: var(--primary-color);
     color: var(--white);
     border: none;
     padding: 15px 30px;
@@ -484,281 +484,14 @@ body {
 } */
 
 
-/* //........ deal of week ........// */
 
-.deal_of_week {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.deal_of_week .names_of_brand p,
-.deal_of_week .names_of_brand h3 {
-    font-size: 1.8rem;
-    margin-bottom: 1rem;
-}
-
-.deal_of_week .names_of_brand p {
-    color: var(--grey);
-}
-
-.deal_of_week .countdown span {
-    color: var(--primary-color);
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin: 0.8rem 0 0 3rem;
-}
-
-.deal_of_week .countdown h3 {
-    font-size: 2rem;
-    font-weight: 600;
-    color: var(--light-black);
-    line-height: 40px;
-    margin: 0.8rem 0 0 3rem;
-}
-
-.deal_of_week .countdown p {
-    margin: 0.8rem 0 0 3rem;
-}
-
-.deal_of_week .countdown a {
-    text-decoration: none;
-    color: var(--white);
-    font-weight: 800;
-}
-
-.deal_of_week .countdown button {
-    margin: 0.8rem 3rem;
-    border: 2px solid var(--primary-color);
-    background-color: var(--primary-color);
-    color: var(--white);
-    border-radius: 10px;
-    padding: 12px;
-    transition: 0.4s;
-}
-
-.deal_of_week .countdown button:hover {
-    background: var(--white);
-    color: var(--primary-color);
-}
-
-.deal_of_week .countdown button:hover~.countdown a {
-    background: var(--white);
-    color: var(--primary-color);
-}
-
-.countdown a:hover {
-    color: var(--primary-color);
-}
-
-
-/* //........ NEWS ........// */
-
-#news {
-    margin-bottom: 250px;
-}
-
-.news-heading p {
-    text-align: center;
-    font-size: 18px;
-    color: var(--primary-color);
-    letter-spacing: 2px;
-    font-weight: 500;
-    margin-bottom: 15px;
-    margin-top: 70px;
-}
-
-.news-heading h2 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 600;
-    color: var(--light-black);
-}
-
-.l-news {
-    padding-top: 45px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    position: relative;
-}
-
-.l-news img {
-    height: 200px;
-    width: 300px;
-}
-
-.l-news1 {
-    position: relative;
-    width: 280px;
-    height: 230px;
-}
-
-.l-news1 .news1-conte {
-    position: absolute;
-    bottom: -60%;
-    left: 7%;
-    background: var(--white);
-    padding: 25px;
-}
-
-.l-news2 {
-    position: relative;
-    width: 280px;
-    height: 230px;
-}
-
-.l-news2 .news2-conte {
-    position: absolute;
-    bottom: -60%;
-    left: 7%;
-    background: var(--white);
-    padding: 25px;
-}
-
-.l-news3 {
-    position: relative;
-    width: 280px;
-    height: 230px;
-}
-
-.l-news3 .news3-conte {
-    position: absolute;
-    bottom: -60%;
-    left: 7%;
-    background: var(--white);
-    padding: 25px;
-}
-
-.l-news1 .news1-conte .date-news1 p {
-    color: var(--light-black);
-    text-align: center;
-    padding: 15px 0;
-}
-
-.l-news1 .news1-conte .date-news1 h4 {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 600;
-    padding-bottom: 15px;
-}
-
-.l-news1 .news1-conte .date-news1 a {
-    text-decoration: none;
-    text-align: center;
-    padding: 0 50px;
-    color: var(--primary-color);
-    position: relative;
-    font-weight: 600;
-}
-
-.l-news1 .news1-conte .date-news1 a::after {
-    content: "";
-    position: absolute;
-    background: #ff3c78;
-    height: 3px;
-    width: 100%;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s;
-}
-
-.l-news1 .news1-conte .date-news1 a:hover:after {
-    width: 0%;
-}
-
-.l-news1 .news1-conte .date-news1 a:hover {
-    color: var(--black);
-}
-
-.l-news2 .news2-conte .date-news2 p {
-    color: var(--light-black);
-    text-align: center;
-    padding: 15px 0;
-}
-
-.l-news2 .news2-conte .date-news2 h4 {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 600;
-    padding-bottom: 15px;
-}
-
-.l-news2 .news2-conte .date-news2 a {
-    text-decoration: none;
-    text-align: center;
-    padding: 0 60px;
-    color: var(--primary-color);
-    position: relative;
-    font-weight: 600;
-}
-
-.l-news2 .news2-conte .date-news2 a::after {
-    content: "";
-    position: absolute;
-    background: #ff3c78;
-    height: 3px;
-    width: 100%;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s;
-}
-
-.l-news2 .news2-conte .date-news2 a:hover:after {
-    width: 0%;
-}
-
-.l-news2 .news2-conte .date-news2 a:hover {
-    color: var(--black);
-}
-
-.l-news3 .news3-conte .date-news3 p {
-    color: var(--light-black);
-    text-align: center;
-    padding: 15px 0;
-}
-
-.l-news3 .news3-conte .date-news3 h4 {
-    font-size: 18px;
-    text-align: center;
-    font-weight: 600;
-    padding-bottom: 15px;
-}
-
-.l-news3 .news3-conte .date-news3 a {
-    text-decoration: none;
-    text-align: center;
-    padding: 0 60px;
-    color: var(--primary-color);
-    position: relative;
-    font-weight: 600;
-}
-
-.l-news3 .news3-conte .date-news3 a::after {
-    content: "";
-    position: absolute;
-    background: #ff3c78;
-    height: 3px;
-    width: 100%;
-    left: 0;
-    bottom: -10px;
-    transition: 0.3s;
-}
-
-.l-news3 .news3-conte .date-news3 a:hover:after {
-    width: 0%;
-}
-
-.l-news3 .news3-conte .date-news3 a:hover {
-    color: var(--black);
-}
 
 
 /* //........ Footer ...... // */
 
 footer {
     width: 100%;
-    background: var(--black);
+    background: var(--primary-color);
 }
 
 .footer-container .content_1 img {
@@ -783,20 +516,20 @@ footer {
 .footer-container a {
     display: block;
     text-decoration: none;
-    color: var(--grey);
+    color: var(--white);
     margin-bottom: 15px;
     font-size: 14px;
 }
 
 .footer-container .content_1 p,
 .footer-container .content_4 p {
-    color: var(--grey);
+    color: var(--white);
     margin: 25px 0;
     font-size: 14px;
 }
 
 .footer-container .content_4 input[type="email"] {
-    background-color: var(--black);
+    background-color: transparent;
     border: none;
     color: var(--white);
     outline: none;
@@ -820,13 +553,18 @@ footer {
 }
 
 .f-design .f-design-txt {
-    border-top: 1px solid var(--grey);
+    border-top: 1px solid var(--white);
     padding: 25px 0;
     font-size: 14px;
-    color: var(--grey);
+    color: var(--white);
 }
 
-
+.footer-container .content_1::after,
+.footer-container .content_2::after,
+.footer-container .content_3::after,
+.footer-container .content_4::after{
+    background: none;
+}
 /* //........ contact ...... // */
 
 .contact {
@@ -910,7 +648,7 @@ iframe {
     padding: 15px 25px;
     color: var(--white);
     font-weight: 500;
-    background: var(--black);
+    background: var(--primary-color);
     outline: none;
     border: none;
     margin: 15px;
@@ -1053,6 +791,7 @@ iframe {
     }
     .form .form-details button {
         margin-left: 0;
+        background-color: var(--primary-color); 
     }
     .form .form-details input[type="text"],
     .form .form-details input[type="email"],

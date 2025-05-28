@@ -35,7 +35,7 @@ const TopSales = () => {
             <br />
             <div className="best-seller">
                 {products.map((product) => (
-                    <div key={product.id} className="best-p1">
+                    <div key={product.id_produits} className="best-p1">
                         <img src={`/src/assets/img/top-sale/${product.image}`} alt={product.nom} style={{marginBottom: '20px'}}/>
                         <div className="best-p1-txt">
                             <div className="name-of-p">
@@ -45,7 +45,7 @@ const TopSales = () => {
                                 ${product.prix}
                             </div>
                             <div className="buy-now" style={{textAlign: 'start', marginTop: '10px'}}>
-                                <button onClick={() => window.location.href = `/product/${product.id}`}>
+                                <button onClick={() => window.location.href = `/product/${product.id_produits}`}>
                                     Buy Now
                                 </button>
                             </div>
