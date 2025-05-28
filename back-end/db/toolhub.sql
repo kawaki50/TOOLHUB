@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1
--- Généré le : mer. 21 mai 2025 à 02:43
+-- Généré le : mer. 28 mai 2025 à 04:40
 -- Version du serveur : 10.4.32-MariaDB
 -- Version de PHP : 8.2.12
 
@@ -29,22 +29,23 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `categories` (
   `id_categories` int(11) NOT NULL,
-  `nom` varchar(100) NOT NULL
+  `nom` varchar(100) NOT NULL,
+  `image` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Déchargement des données de la table `categories`
 --
 
-INSERT INTO `categories` (`id_categories`, `nom`) VALUES
-(1, 'Outillage à main'),
-(2, 'Outillage électroportatif'),
-(3, 'Quincaillerie'),
-(4, 'Peinture et décoration'),
-(5, 'Plomberie'),
-(6, 'Électricité'),
-(7, 'Jardinage'),
-(8, 'Sécurité et protection');
+INSERT INTO `categories` (`id_categories`, `nom`, `image`) VALUES
+(1, 'Outillage à main', 'Outillage à main.jpg'),
+(2, 'Outillage électroportatif', 'Outillage électroportatif.jpg\r\n'),
+(3, 'Quincaillerie', 'Quincaillerie.jpg'),
+(4, 'Peinture & décoration', 'Peinture et décoration.jpg\r\n'),
+(5, 'Plomberie', 'Plomberie.jpg\r\n'),
+(6, 'Électricité', 'Électricité.webp\r\n'),
+(7, 'Jardinage', 'Jardinage.jpg'),
+(8, 'Sécurité & protection', 'Sécurité et protection.jpg\r\n');
 
 -- --------------------------------------------------------
 
@@ -111,35 +112,21 @@ CREATE TABLE `produits` (
 
 INSERT INTO `produits` (`id_produits`, `id_categories`, `nom`, `description`, `prix`, `quantite`, `image`, `date_ajout`) VALUES
 (1, 1, 'Marteau de charpentier', 'Marteau robuste avec manche en fibre de verre, idéal pour les travaux de construction.', 24.99, 50, 'marteau.jpg', '2025-05-20 00:23:44'),
-(2, 1, 'Tournevis cruciforme', 'Tournevis professionnel avec manche ergonomique antidérapant.', 9.99, 100, 'tournevis_cruciforme.jpg', '2025-05-20 00:23:44'),
-(3, 2, 'Perceuse visseuse sans fil 18V', 'Perceuse puissante avec batterie lithium-ion et 2 vitesses variables.', 129.99, 30, 'perceuse_visseuse.jpg', '2025-05-20 00:23:44'),
-(4, 2, 'Scie circulaire 1200W', 'Scie circulaire puissante avec lame carbure 185mm et guide parallèle.', 99.50, 20, 'scie_circulaire.jpg', '2025-05-20 00:23:44'),
+(2, 1, 'Tournevis cruciforme', 'Tournevis professionnel avec manche ergonomique antidérapant.', 9.99, 100, 'Tournevis professionnel avec manche ergonomique antidérapant.webp', '2025-05-20 00:23:44'),
+(3, 2, 'Perceuse visseuse sans fil 18V', 'Perceuse puissante avec batterie lithium-ion et 2 vitesses variables.', 129.99, 30, 'Perceuse visseuse sans fil 18V.jpg', '2025-05-20 00:23:44'),
+(4, 2, 'Scie circulaire 1200W', 'Scie circulaire puissante avec lame carbure 185mm et guide parallèle.', 99.50, 20, 'Scie circulaire 1200W.webp', '2025-05-20 00:23:44'),
 (5, 3, 'Boîte de 100 vis universelles', 'Assortiment de vis à bois de différentes tailles avec tête cruciforme.', 12.50, 80, 'vis_universelles.jpg', '2025-05-20 00:23:44'),
-(6, 3, 'Set de 50 chevilles murales', 'Chevilles en plastique pour fixation dans plaque de plâtre et béton.', 8.99, 100, 'chevilles.jpg', '2025-05-20 00:23:44'),
-(7, 4, 'Peinture murale blanc mat 10L', 'Peinture acrylique haute qualité, couvrante et lessivable.', 49.99, 40, 'peinture_murale.jpg', '2025-05-20 00:23:44'),
-(8, 4, 'Kit de rouleaux et bacs', 'Ensemble complet avec 3 rouleaux différents et bac de peinture.', 22.50, 30, 'kit_rouleaux.jpg', '2025-05-20 00:23:44'),
+(6, 3, 'Set de 50 chevilles murales', 'Chevilles en plastique pour fixation dans plaque de plâtre et béton.', 8.99, 100, 'Set de 50 chevilles murales.jpg', '2025-05-20 00:23:44'),
+(7, 4, 'Peinture murale blanc mat 10L', 'Peinture acrylique haute qualité, couvrante et lessivable.', 49.99, 40, 'Peinture murale blanc mat 10L.jpg', '2025-05-20 00:23:44'),
+(8, 4, 'Kit de rouleaux et bacs', 'Ensemble complet avec 3 rouleaux différents et bac de peinture.', 22.50, 30, 'Kit de rouleaux et bacs.webp', '2025-05-20 00:23:44'),
 (9, 5, 'Clé à tube 300mm', 'Clé à tube en acier forgé pour serrage de raccords et tuyaux.', 18.50, 30, 'cle_tube.jpg', '2025-05-20 00:23:44'),
-(10, 5, 'Joint silicone sanitaire', 'Mastic silicone anti-moisissure pour joints d\'étanchéité en milieu humide.', 8.95, 50, 'joint_silicone.jpg', '2025-05-20 00:23:44'),
+(10, 5, 'Joint silicone sanitaire', 'Mastic silicone anti-moisissure pour joints d\'étanchéité en milieu humide.', 8.95, 50, 'Joint silicone sanitaire.webp', '2025-05-20 00:23:44'),
 (11, 6, 'Multimètre numérique', 'Appareil de mesure électrique multifonction avec écran LCD.', 29.95, 20, 'multimetre.jpg', '2025-05-20 00:23:44'),
-(12, 6, 'Boîte de 10 dominos électriques', 'Connecteurs électriques isolés pour jonction de fils.', 5.99, 80, 'dominos.jpg', '2025-05-20 00:23:44'),
-(13, 7, 'Sécateur professionnel', 'Sécateur bypass avec lames en acier trempé et ressort amortisseur.', 23.50, 40, 'secateur.jpg', '2025-05-20 00:23:44'),
-(14, 7, 'Bêche de jardin', 'Bêche robuste avec manche en bois et repose-pied renforcé.', 32.95, 20, 'beche.jpg', '2025-05-20 00:23:44'),
-(15, 1, 'Marteau de charpentier', 'Marteau robuste avec manche en fibre de verre, idéal pour les travaux de construction.', 24.99, 50, 'marteau.jpg', '2025-05-20 00:24:36'),
-(16, 1, 'Tournevis cruciforme', 'Tournevis professionnel avec manche ergonomique antidérapant.', 9.99, 100, 'tournevis_cruciforme.jpg', '2025-05-20 00:24:36'),
-(17, 2, 'Perceuse visseuse sans fil 18V', 'Perceuse puissante avec batterie lithium-ion et 2 vitesses variables.', 129.99, 30, 'perceuse_visseuse.jpg', '2025-05-20 00:24:36'),
-(18, 2, 'Scie circulaire 1200W', 'Scie circulaire puissante avec lame carbure 185mm et guide parallèle.', 99.50, 20, 'scie_circulaire.jpg', '2025-05-20 00:24:36'),
-(19, 3, 'Boîte de 100 vis universelles', 'Assortiment de vis à bois de différentes tailles avec tête cruciforme.', 12.50, 80, 'vis_universelles.jpg', '2025-05-20 00:24:36'),
-(20, 3, 'Set de 50 chevilles murales', 'Chevilles en plastique pour fixation dans plaque de plâtre et béton.', 8.99, 100, 'chevilles.jpg', '2025-05-20 00:24:36'),
-(21, 4, 'Peinture murale blanc mat 10L', 'Peinture acrylique haute qualité, couvrante et lessivable.', 49.99, 40, 'peinture_murale.jpg', '2025-05-20 00:24:36'),
-(22, 4, 'Kit de rouleaux et bacs', 'Ensemble complet avec 3 rouleaux différents et bac de peinture.', 22.50, 30, 'kit_rouleaux.jpg', '2025-05-20 00:24:36'),
-(23, 5, 'Clé à tube 300mm', 'Clé à tube en acier forgé pour serrage de raccords et tuyaux.', 18.50, 30, 'cle_tube.jpg', '2025-05-20 00:24:36'),
-(24, 5, 'Joint silicone sanitaire', 'Mastic silicone anti-moisissure pour joints d\'étanchéité en milieu humide.', 8.95, 50, 'joint_silicone.jpg', '2025-05-20 00:24:36'),
-(25, 6, 'Multimètre numérique', 'Appareil de mesure électrique multifonction avec écran LCD.', 29.95, 20, 'multimetre.jpg', '2025-05-20 00:24:36'),
-(26, 6, 'Boîte de 10 dominos électriques', 'Connecteurs électriques isolés pour jonction de fils.', 5.99, 80, 'dominos.jpg', '2025-05-20 00:24:36'),
-(27, 7, 'Sécateur professionnel', 'Sécateur bypass avec lames en acier trempé et ressort amortisseur.', 23.50, 40, 'secateur.jpg', '2025-05-20 00:24:36'),
-(28, 7, 'Bêche de jardin', 'Bêche robuste avec manche en bois et repose-pied renforcé.', 32.95, 20, 'beche.jpg', '2025-05-20 00:24:36'),
-(29, 8, 'Paire de gants de travail', 'Gants de protection en cuir synthétique avec renfort aux paumes.', 12.99, 60, 'gants.jpg', '2025-05-20 00:24:36'),
-(30, 8, 'Lunettes de protection', 'Lunettes anti-rayures et anti-buée avec protection latérale.', 9.50, 70, 'lunettes.jpg', '2025-05-20 00:24:36');
+(12, 6, 'Boîte de 10 dominos électriques', 'Connecteurs électriques isolés pour jonction de fils.', 5.99, 80, 'Boîte de 10 dominos électriques.jpg', '2025-05-20 00:23:44'),
+(13, 7, 'Sécateur professionnel', 'Sécateur bypass avec lames en acier trempé et ressort amortisseur.', 23.50, 40, 'Sécateur professionnel.jpg', '2025-05-27 00:23:44'),
+(14, 7, 'Bêche de jardin', 'Bêche robuste avec manche en bois et repose-pied renforcé.', 32.95, 20, 'Bêche de jardin.jpg', '2025-05-27 00:23:44'),
+(29, 8, 'Paire de gants de travail', 'Gants de protection en cuir synthétique avec renfort aux paumes.', 12.99, 60, 'Paire de gants de travail\n.jpg', '2025-05-27 00:24:36'),
+(30, 8, 'Lunettes de protection', 'Lunettes anti-rayures et anti-buée avec protection latérale.', 9.50, 70, 'Lunettes de protection.webp', '2025-05-27 00:24:36');
 
 -- --------------------------------------------------------
 
