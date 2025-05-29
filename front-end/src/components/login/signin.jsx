@@ -1,8 +1,9 @@
 import React from 'react';
+import '../../assets/css/login.css';
 
 function Signin() {
     return (
-        <div class="form sign-in">
+        <div className="custom-form custom-sign-in">
     <h2>Welcome back,</h2>
     <label>
       <span>Email</span>
@@ -12,10 +13,11 @@ function Signin() {
       <span>Password</span>
       <input type="password" />
     </label>
-    <p class="forgot-pass">Forgot password?</p>
-    <button type="button" class="submit">Sign In</button>
+    <p className="custom-forgot-pass">Forgot password?</p>
+    <button type="button" className="custom-submit">Sign In</button>
   </div>
-    );
+    )
 }
+
 
 export default Signin;
