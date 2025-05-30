@@ -14,7 +14,7 @@ function Signin() {
       <input type="password" />
     </label>
     <p className="custom-forgot-pass">Forgot password?</p>
-    <button type="button" className="custom-submit">Sign In</button>
+    <button type="button" className="custom-submit" style={{marginTop: '55px'}}>Sign In</button>
   </div>
     )
 }
