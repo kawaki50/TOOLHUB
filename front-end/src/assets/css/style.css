@@ -630,13 +630,14 @@ iframe {
     color: var(--grey);
     outline: none;
     border: 1px solid var(--grey);
-    margin: 35px 15px;
+    margin: 20px auto;
     font-size: 14px;
+    width: 80%;
 }
 
 .form .form-details textarea {
     padding: 15px 20px;
-    margin: 0 15px;
+    margin: 20px  auto;
     color: var(--grey);
     outline: none;
     border: 1px solid var(--grey);
@@ -651,10 +652,12 @@ iframe {
     background: var(--primary-color);
     outline: none;
     border: none;
-    margin: 15px;
     font-size: 14px;
     letter-spacing: 2px;
     cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 

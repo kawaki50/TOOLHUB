@@ -20,54 +20,58 @@ $data = json_decode(file_get_contents("php://input"), true);
 if ($data) {
     // Vérifier si toutes les données requises sont présentes
     if (
-        isset($data['nom']) && !empty($data['nom']) &&
         isset($data['email']) && !empty($data['email']) &&
         isset($data['mot_de_passe']) && !empty($data['mot_de_passe'])
     ) {
-
         try {
             // Nettoyer les données
-            $nom = htmlspecialchars($data['nom']);
             $email = htmlspecialchars($data['email']);
-            $mot_de_passe = password_hash($data['mot_de_passe'], PASSWORD_DEFAULT);
+            $mot_de_passe = $data['mot_de_passe'];
 
             // Préparer et exécuter la requête
-            $sql = "INSERT INTO utilisateurs(nom, email, mot_de_passe) VALUES(:nom, :email, :mot_de_passe)";
+            $sql = "SELECT * FROM utilisateurs WHERE email = :email";
             $query = $conn->prepare($sql);
-            $query->execute(array(
-                ':nom' => $nom,
-                ':email' => $email,
-                ':mot_de_passe' => $mot_de_passe
-            ));
+            $query->execute([':email' => $email]);
+            $user = $query->fetch(PDO::FETCH_ASSOC);
 
-            // Réponse de succès
-            http_response_code(201);
-            echo json_encode(array(
-                "success" => true,
-                "message" => "Inscription réussie"
-            ));
-        } catch (PDOException $e) {
-            // Gérer les erreurs de base de données
-            if ($e->getCode() == 23000) { // Code d'erreur pour doublon
-                http_response_code(400);
+            if ($user && password_verify($mot_de_passe, $user['mot_de_passe'])) {
+                // Connexion réussie
+                session_start();
+                $_SESSION['user_id'] = $user['id_utilisateurs'];
+                $_SESSION['user_nom'] = $user['nom'];
+                $_SESSION['user_email'] = $user['email'];
+
+                http_response_code(200);
                 echo json_encode(array(
-                    "success" => false,
-                    "message" => "Cet email est déjà utilisé"
+                    "success" => true,
+                    "message" => "Connexion réussie",
+                    "user" => array(
+                        "id" => $user['id_utilisateurs'],
+                        "nom" => $user['nom'],
+                        "email" => $user['email']
+                    )
                 ));
             } else {
-                http_response_code(500);
+                // Identifiants incorrects
+                http_response_code(401);
                 echo json_encode(array(
                     "success" => false,
-                    "message" => "Erreur lors de l'inscription"
+                    "message" => "Email ou mot de passe incorrect"
                 ));
             }
+        } catch (PDOException $e) {
+            http_response_code(500);
+            echo json_encode(array(
+                "success" => false,
+                "message" => "Erreur lors de la connexion"
+            ));
         }
     } else {
         // Données manquantes
         http_response_code(400);
         echo json_encode(array(
             "success" => false,
-            "message" => "Tous les champs sont requis"
+            "message" => "Email et mot de passe requis"
         ));
     }
 } else {

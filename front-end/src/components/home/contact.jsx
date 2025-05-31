@@ -24,7 +24,7 @@ function Contact () {
                     <input type="text" name="name" id="name" placeholder="Name" required/>
                     <input type="email" name="email" id="email" placeholder="Email" required/>
                     <textarea name="message" id="message" cols="52" rows="7" placeholder="Message" required/>
-                    <button>SEND MESSAGE</button>
+                    <button style={{borderRadius:'0px',padding:'25px',marginTop:'20px'}}>SEND MESSAGE</button>
                 </div>
             </div>
         </form>
