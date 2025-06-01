@@ -39,7 +39,7 @@ const TopSales = () => {
                         <img src={`/src/assets/img/top-sale/${product.image}`} alt={product.nom} style={{marginBottom: '20px'}}/>
                         <div className="best-p1-txt">
                             <div className="name-of-p">
-                                <p style={{textAlign: 'start'}}>{product.nom}</p>
+                                <p style={{textAlign: 'start',fontWeight: 'bold',marginBottom: '10px'}}>{product.nom}</p>
                             </div>
                             <div className="price">
                                 ${product.prix}

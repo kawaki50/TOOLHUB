@@ -60,7 +60,7 @@ const Nav = () => {
                     <li><a href="#home">Home</a></li>
                     <li><a href="#sellers">Shop</a></li>
                     <li><a href="#contact">Contact</a></li>
-                    <li style={{position:'absolute', right:'0px'}}>
+                    <li style={{position:'absolute', right:'0px',marginRight: '2rem'}}>
                         {isLoggedIn ? (
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
                                 <p style={{marginRight: '10px'}}>{userName}</p>
