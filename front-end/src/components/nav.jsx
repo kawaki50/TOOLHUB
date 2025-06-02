@@ -56,9 +56,9 @@ const Nav = () => {
                     <span className="line line2"></span>
                     <span className="line line3"></span>
                 </div>
-                <ul className="menu-items" style={{margin: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#sellers">Shop</a></li>
+                <ul className="menu-items" style={{margin: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between',position:'relative',left:'50%'}}>
+                    <li><Link to="/">Home</Link></li>
+                    <li><Link to="/store">Shop</Link></li>
                     <li><a href="#contact">Contact</a></li>
                     <li style={{position:'absolute', right:'0px',marginRight: '2rem'}}>
                         {isLoggedIn ? (
