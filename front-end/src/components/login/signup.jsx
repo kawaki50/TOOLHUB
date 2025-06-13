@@ -92,6 +92,7 @@ function SignUp() {
                 required/>
         {errors.nom && <span className="error">{errors.nom}</span>}
       </label>
+      <br />
       <label>
         <span>Email</span>
         <input type="email"
@@ -100,7 +101,8 @@ function SignUp() {
                  required/>
         {errors.email && <span className="error">{errors.email}</span>}
       </label>
-      <label>
+      <br />
+      <label style={{marginBottom: '20px'}}>
         <span>Password</span>
         <input type="password"
                 value={formData.mot_de_passe}

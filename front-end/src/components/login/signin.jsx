@@ -73,6 +73,7 @@ function Signin() {
                     />
                     {errors.email && <span className="error">{errors.email}</span>}
                 </label>
+                <br />
                 <label>
                     <span>Password</span>
                     <input 

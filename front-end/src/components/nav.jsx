@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faUser, faSignOutAlt } from '@fortawesome/free-solid-svg-icons';
+import { faUser, faSignOutAlt,faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 const Nav = () => {
     const [isLoggedIn, setIsLoggedIn] = useState(false);
@@ -56,7 +56,7 @@ const Nav = () => {
                     <span className="line line2"></span>
                     <span className="line line3"></span>
                 </div>
-                <ul className="menu-items" style={{margin: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between',position:'relative',left:'50%'}}>
+                <ul className="menu-items" style={{margin: 'auto', display: 'flex', alignItems: 'center', justifyContent: 'space-between',/*position:'relative',left:'50%'*/}}>
                     <li><Link to="/">Home</Link></li>
                     <li><Link to="/store">Shop</Link></li>
                     <li><a href="#contact">Contact</a></li>
@@ -64,6 +64,8 @@ const Nav = () => {
                         {isLoggedIn ? (
                             <div style={{display: 'flex', alignItems: 'center', justifyContent: 'space-between'}}>
                                 <p style={{marginRight: '10px'}}>{userName}</p>
+                                <Link to="/cart" style={{marginRight: '10px', color: 'inherit'}}>
+                                <FontAwesomeIcon icon={faCartShopping} /></Link>
                                 <button 
                                     onClick={handleLogout}
                                     style={{ 
@@ -78,7 +80,10 @@ const Nav = () => {
                                 >
                                     <FontAwesomeIcon icon={faSignOutAlt} />
                                 </button>
+                                
+
                             </div>
+                            
                         ) : (
                             <Link to="/login" style={{marginRight: '30px'}}>
                                 <FontAwesomeIcon icon={faUser} />

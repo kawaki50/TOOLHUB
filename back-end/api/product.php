@@ -1,13 +1,15 @@
 <?php
 // Headers requis
-
+// Headers requis
+header("Access-Control-Allow-Origin: *");
+header("Content-Type: application/json; charset=UTF-8");
 
 // Inclusion de la base de données et création d'un objet
 require_once '/Xampp/htdocs/toolhub/back-end/config/db.php';
 
 
-// Requête pour récupérer tous les produits
-$query = "SELECT * FROM produits ORDER BY id_produits DESC";
+// Requête pour récupérer tous les produits avec le nom de la catégorie
+$query = "SELECT produits.*, categories.nom as categories_name FROM produits JOIN categories ON produits.id_categories = categories.id_categories;";
 $stmt = $conn->prepare($query);
 $stmt->execute();
 
@@ -26,7 +28,8 @@ if ($stmt->rowCount() > 0) {
             "description" => $description,
             "prix" => $prix,
             "image" => $image,
-            "date_ajout" => $date_ajout
+            "date_ajout" => $date_ajout,
+            "categories_name" => $categories_name
         );
 
         array_push($products_arr["records"], $product_item);
